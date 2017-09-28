@@ -46,11 +46,14 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+        ],
+        'formatter' => [
+            'locale' => 'ru_RU',
         ],
     ],
+    'language' => 'ru_RY',
     'params' => $params,
+    'name' => 'Зарплатный калькулятор'
 ];
 
 if (YII_ENV_DEV) {

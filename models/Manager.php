@@ -9,7 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $fullname
- * @property string $salary
+ * @property int $salary
  */
 class Manager extends \yii\db\ActiveRecord
 {
@@ -40,8 +40,8 @@ class Manager extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'fullname' => Yii::t('app', 'Fullname'),
-            'salary' => Yii::t('app', 'Salary'),
+            'fullname' => Yii::t('app', 'ФИО'),
+            'salary' => Yii::t('app', 'Оклад'),
         ];
     }
 

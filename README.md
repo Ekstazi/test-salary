@@ -1,212 +1,633 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
-    <br>
-</p>
+В Компании 3 менеджера по продажам.
 
-Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-rapidly creating small projects.
+<table width="385" cellspacing="0" cellpadding="7"><colgroup><col width="22"> <col width="194"> <col width="125"></colgroup> 
 
-The template contains the basic features including user login/logout and a contact page.
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
+<tbody>
 
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-basic/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-basic/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-basic)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-basic.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-basic)
+<tr valign="top">
 
-DIRECTORY STRUCTURE
--------------------
+<td width="22">
 
-      assets/             contains assets definition
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      mail/               contains view files for e-mails
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      tests/              contains various tests for the basic application
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
+№
 
+</td>
 
+<td width="194">
 
-REQUIREMENTS
-------------
+**ФИО**
 
-The minimum requirement by this project template that your Web server supports PHP 5.4.0.
+</td>
 
+<td width="125">
 
-INSTALLATION
-------------
+**Оклад(рублей)**
 
-### Install via Composer
+</td>
 
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
+</tr>
 
-You can then install this project template using the following command:
+<tr valign="top">
 
-~~~
-php composer.phar create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic basic
-~~~
+<td width="22">
 
-Now you should be able to access the application through the following URL, assuming `basic` is the directory
-directly under the Web root.
+1
 
-~~~
-http://localhost/basic/web/
-~~~
+</td>
 
+<td width="194">
 
-### Install from an Archive File
+Хельга Браун
 
-Extract the archive file downloaded from [yiiframework.com](http://www.yiiframework.com/download/) to
-a directory named `basic` that is directly under the Web root.
+</td>
 
-Set cookie validation key in `config/web.php` file to some random secret string:
+<td width="125">
 
-```php
-'request' => [
-    // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-    'cookieValidationKey' => '<secret random string goes here>',
-],
-```
+20 000
 
-You can then access the application through the following URL:
+</td>
 
-~~~
-http://localhost/basic/web/
-~~~
+</tr>
 
+<tr valign="top">
 
-CONFIGURATION
--------------
+<td width="22">
 
-### Database
+2
 
-Edit the file `config/db.php` with real data, for example:
+</td>
 
-```php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
-];
-```
+<td width="194">
 
-**NOTES:**
-- Yii won't create the database for you, this has to be done manually before you can access it.
-- Check and edit the other files in the `config/` directory to customize your application as required.
-- Refer to the README in the `tests` directory for information specific to basic application tests.
+Барак Обама
 
+</td>
 
+<td width="125">
 
-TESTING
--------
+30 000
 
-Tests are located in `tests` directory. They are developed with [Codeception PHP Testing Framework](http://codeception.com/).
-By default there are 3 test suites:
+</td>
 
-- `unit`
-- `functional`
-- `acceptance`
+</tr>
 
-Tests can be executed by running
+<tr valign="top">
 
-```
-vendor/bin/codecept run
-```
+<td width="22">
 
-The command above will execute unit and functional tests. Unit tests are testing the system components, while functional
-tests are for testing user interaction. Acceptance tests are disabled by default as they require additional setup since
-they perform testing in real browser. 
+3
 
+</td>
 
-### Running  acceptance tests
+<td width="194">
 
-To execute acceptance tests do the following:  
+Денис Козлов
 
-1. Rename `tests/acceptance.suite.yml.example` to `tests/acceptance.suite.yml` to enable suite configuration
+</td>
 
-2. Replace `codeception/base` package in `composer.json` with `codeception/codeception` to install full featured
-   version of Codeception
+<td width="125">
 
-3. Update dependencies with Composer 
+40 000
 
-    ```
-    composer update  
-    ```
+</td>
 
-4. Download [Selenium Server](http://www.seleniumhq.org/download/) and launch it:
+</tr>
 
-    ```
-    java -jar ~/selenium-server-standalone-x.xx.x.jar
-    ```
+</tbody>
 
-    In case of using Selenium Server 3.0 with Firefox browser since v48 or Google Chrome since v53 you must download [GeckoDriver](https://github.com/mozilla/geckodriver/releases) or [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) and launch Selenium with it:
+</table>
 
-    ```
-    # for Firefox
-    java -jar -Dwebdriver.gecko.driver=~/geckodriver ~/selenium-server-standalone-3.xx.x.jar
-    
-    # for Google Chrome
-    java -jar -Dwebdriver.chrome.driver=~/chromedriver ~/selenium-server-standalone-3.xx.x.jar
-    ``` 
-    
-    As an alternative way you can use already configured Docker container with older versions of Selenium and Firefox:
-    
-    ```
-    docker run --net=host selenium/standalone-firefox:2.53.0
-    ```
+За каждый обработанный звонок, менеджер получает фиксированный бонус к окладу. Существует система увеличения бонуса в зависимости от общего количества обработанных звонков в месяц.
 
-5. (Optional) Create `yii2_basic_tests` database and update it by applying migrations if you have them.
+Таблица начислений бонусов:
 
-   ```
-   tests/bin/yii migrate
-   ```
+<table width="623" cellspacing="0" cellpadding="7"><colgroup><col width="193"> <col width="194"> <col width="193"></colgroup> 
 
-   The database configuration can be found at `config/test_db.php`.
+<tbody>
 
+<tr valign="top">
 
-6. Start web server:
+<td width="193">
 
-    ```
-    tests/bin/yii serve
-    ```
+**Шаг начисления за месяц**
 
-7. Now you can run all available tests
+</td>
 
-   ```
-   # run all available tests
-   vendor/bin/codecept run
+<td width="194">
 
-   # run acceptance tests
-   vendor/bin/codecept run acceptance
+**Название категорий**
 
-   # run only unit and functional tests
-   vendor/bin/codecept run unit,functional
-   ```
+</td>
 
-### Code coverage support
+<td width="193">
 
-By default, code coverage is disabled in `codeception.yml` configuration file, you should uncomment needed rows to be able
-to collect code coverage. You can run your tests and collect coverage with the following command:
+**Бонусы начисления к окладу**
 
-```
-#collect coverage for all tests
-vendor/bin/codecept run -- --coverage-html --coverage-xml
+</td>
 
-#collect coverage only for unit tests
-vendor/bin/codecept run unit -- --coverage-html --coverage-xml
+</tr>
 
-#collect coverage for unit and functional tests
-vendor/bin/codecept run functional,unit -- --coverage-html --coverage-xml
-```
+<tr valign="top">
 
-You can see code coverage output under the `tests/_output` directory.
+<td width="193">
+
+До 100(включительно)
+
+</td>
+
+<td width="194">
+
+Начальная
+
+</td>
+
+<td width="193">
+
+100
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="193">
+
+До 200(включительно)
+
+</td>
+
+<td width="194">
+
+Средняя
+
+</td>
+
+<td width="193">
+
+200
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="193">
+
+Более 300(включительно)
+
+</td>
+
+<td width="194">
+
+Высшая
+
+</td>
+
+<td width="193">
+
+300
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<a name="_GoBack"></a>Входные данные. Общая статистика посуточно за обработанные звонки
+
+<table width="623" cellspacing="0" cellpadding="7"><colgroup><col width="83"> <col width="170"> <col width="121"> <col width="190"></colgroup> 
+
+<tbody>
+
+<tr valign="top">
+
+<td width="83">
+
+**День**
+
+</td>
+
+<td width="170">
+
+**Менеджер 1**
+
+</td>
+
+<td width="121">
+
+**Менеджер 2**
+
+</td>
+
+<td width="190">
+
+**Менеджер 3**
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+1.01.2015
+
+</td>
+
+<td width="170">
+
+10
+
+</td>
+
+<td width="121">
+
+10
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+2.01.2015
+
+</td>
+
+<td width="170">
+
+40
+
+</td>
+
+<td width="121">
+
+20
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+3.01.2015
+
+</td>
+
+<td width="170">
+
+40
+
+</td>
+
+<td width="121">
+
+10
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+4.01.2015
+
+</td>
+
+<td width="170">
+
+30
+
+</td>
+
+<td width="121">
+
+30
+
+</td>
+
+<td width="190">
+
+30
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+5.01.2015
+
+</td>
+
+<td width="170">
+
+10
+
+</td>
+
+<td width="121">
+
+10
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+6.01.2015
+
+</td>
+
+<td width="170">
+
+выходной
+
+</td>
+
+<td width="121">
+
+выходной
+
+</td>
+
+<td width="190">
+
+выходной
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+7.01.2015
+
+</td>
+
+<td width="170">
+
+выходной
+
+</td>
+
+<td width="121">
+
+выходной
+
+</td>
+
+<td width="190">
+
+выходной
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+8.01.2015
+
+</td>
+
+<td width="170">
+
+10
+
+</td>
+
+<td width="121">
+
+10
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+9.01.2015
+
+</td>
+
+<td width="170">
+
+20
+
+</td>
+
+<td width="121">
+
+Не работал
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+10.01.2015
+
+</td>
+
+<td width="170">
+
+30
+
+</td>
+
+<td width="121">
+
+Не работал
+
+</td>
+
+<td width="190">
+
+30
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+11.01.2015
+
+</td>
+
+<td width="170">
+
+10
+
+</td>
+
+<td width="121">
+
+Не работал
+
+</td>
+
+<td width="190">
+
+10
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+12.01.2015
+
+</td>
+
+<td width="170">
+
+20
+
+</td>
+
+<td width="121">
+
+Не работал
+
+</td>
+
+<td width="190">
+
+20
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+13.01.2015
+
+</td>
+
+<td width="170">
+
+выходной
+
+</td>
+
+<td width="121">
+
+выходной
+
+</td>
+
+<td width="190">
+
+выходной
+
+</td>
+
+</tr>
+
+<tr valign="top">
+
+<td width="83">
+
+14.01.2015
+
+</td>
+
+<td width="170">
+
+выходной
+
+</td>
+
+<td width="121">
+
+выходной
+
+</td>
+
+<td width="190">
+
+выходной
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+1.  Исходя из входных данных продумайте архитектуру базы данных и напишите запросы по созданию таблиц в БД.
+
+2.  В процессе написания кода примените паттерн MVC.
+
+3.  Выведите итоговую ЗП по каждому сотруднику и историю начислений бонусов.
